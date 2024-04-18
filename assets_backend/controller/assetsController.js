@@ -23,7 +23,7 @@ module.exports = {
             const limit = parseInt(req.query.limit) || 10;
             const skipIndex = (page - 1) * limit; 
 
-            const assets = await AssetsModel.find()
+            const assets = await AssetsModel.find({status_id: { $nin: [2] }})
                 .skip(skipIndex)
                 .limit(limit);
 
