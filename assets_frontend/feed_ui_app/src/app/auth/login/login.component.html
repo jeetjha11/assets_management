@@ -1,0 +1,14 @@
+<!-- login.component.html -->
+<div class="login-container">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="username">Email/User Name:</label>
+      <input type="text" formControlName="email" id="username" ng-model="vm.username">
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" id="password" ng-model="vm.password">
+      <br>
+      <button type="submit" ng-click="vm.login()">Login</button><br>
+      <a style="color: blue; cursor: pointer;" routerLink="/register">New User? Click For Registration</a>
+    </form>
+  </div>

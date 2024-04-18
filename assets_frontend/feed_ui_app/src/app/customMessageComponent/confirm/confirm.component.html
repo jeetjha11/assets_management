@@ -1,0 +1,9 @@
+<div class=" p-6  rounded-lg">
+    <div mat-dialog-title>
+        {{errorMsg}}
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button  mat-dialog-close>NO</button>
+        <button mat-button mat-dialog-close [mat-dialog-close]="true" color="warn" cdkFocusInitial>YES</button>
+    </div>
+</div>

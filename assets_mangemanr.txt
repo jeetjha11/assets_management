@@ -1,0 +1,44 @@
+Assets Management System:
+
+
+user should be able to update the profile name and another details
+user should be able to login and logout 
+user should be able to see the recent page for the assets
+user should be able to filter the assets according to the price range and type
+user should be able to like the assets
+user can order the assets for the rent  according to the time duration the price should be reflected
+user should be able to make the payment of the assets once after verified
+
+
+there will be two login:
+user login:
+shop login:
+shop login will be besicully a admin login which will verify from there end to the customer
+
+like avability of product delevery date for the product
+and all 
+admin will have there own dashboard 
+and the user will have there own dashboard
+
+
+
+
+
+assets:
+
+user can see all the assets
+user will make the order for the assets once the assets will be verified with customer then the payments should be done once the payment will be done then the 
+user will get the original of recepts with tranjection id and all required details on the recept the product order recept
+
+user  will be able to conncet any time with admin
+
+user can give the feedback of the assets:
+
+
+there will be tracking of the assets according to the time which left ans the 
+duration
+
+
+
+
+
