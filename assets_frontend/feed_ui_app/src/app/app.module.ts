@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -44,15 +43,16 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { ConfirmComponent } from './customMessageComponent/confirm/confirm.component';
 import { HomeComponent } from './layout/home/home.component';
+import { LoginDialougeComponent } from './layout/login-dialouge/login-dialouge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NavbarComponent,
     ConfirmComponent,
-    HomeComponent
+    HomeComponent,
+    LoginDialougeComponent
   ],
   imports: [
     BrowserModule,

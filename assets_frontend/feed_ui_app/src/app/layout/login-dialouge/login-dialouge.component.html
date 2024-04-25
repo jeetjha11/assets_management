@@ -1,0 +1,41 @@
+<div  style="border-radius: 25px;" class="container">
+    <h1>Please Login To Continue</h1>
+    <form [formGroup]="loginForm" class="login-form" (ngSubmit)="submit()">
+        <label for="username-email">
+            Username or email
+            <input formControlName="email" type="text" id="username-email" required>
+            <mat-error *ngIf="loginForm.errors?.['required']">
+                Email is required.
+            </mat-error>
+        </label>
+        <label for="password">
+            Password
+            <input formControlName="password" type="password" id="password" required>
+            <mat-error *ngIf="loginForm.errors?.['required']">
+                Password is required.
+            </mat-error>
+        </label>
+        <input type="checkbox" id="remember-me">
+        <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')">
+            Password Is Required.
+        </mat-error><br>
+        <label for="remember-me">Remember me</label>
+        <div style="display: flex; justify-content: space-between; gap: 2px;">
+            <button [disabled]="loginForm.invalid" [mat-dialog-close]="loginForm.value" type="submit">Sign In</button>
+            <button class="close" [mat-dialog-close]="false">Cancle</button>
+        </div>
+        <p class="alternate-options">
+            Or sign up <a [mat-dialog-close]="false" routerLink="/register">here</a> or <a href="forgot-password.html">forgot password</a>?
+        </p>
+    </form>
+    <div class="social-logins">
+        <a [mat-dialog-close]="true" href="#" class="social-login google">G</a>
+        <a [mat-dialog-close]="true" href="#" class="social-login linkedin">in</a>
+        <a [mat-dialog-close]="true" href="#" class="social-login facebook">f</a>
+        <a [mat-dialog-close]="true" href="#" class="social-login github">Git</a>
+    </div>
+    <p class="policy">
+        By creating this account, you agree to our <a [mat-dialog-close]="false" href="privacy-policy.html">Privacy Policy</a> & <a
+            href="cookie-policy.html">Cookie Policy</a>.
+    </p>
+</div>

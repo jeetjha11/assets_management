@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    width: 320px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .login-form {
+    margin-bottom: 16px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .close {
+    width: 100%;
+    padding: 8px;
+    background-color: #a93f09;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .alternate-options {
+    margin-top: 16px;
+    font-size: 0.8em;
+  }
+  
+  .alternate-options a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 4px;
+  }
+  
+  .social-logins {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .social-login {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    color: #fff;
+    border-radius: 50%;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin: 0 4px;
+  }
+  
+  .google {
+    background-color: #ea4335;
+  }
+  
+  .linkedin {
+    background-color: #0072b1;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .github {
+    background-color: #333;
+  }
+  
+  .policy {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 16px;
+  }
+  
+  .policy a {
+    color: #007bff;
+    text-decoration: none;
+  }

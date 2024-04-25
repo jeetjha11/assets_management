@@ -1,68 +1,221 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Assets App</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login/Register</a>
-        </li>
-      </ul>
-      <div>
-        <button class="btn  me-md-2" type="button"><mat-icon>account_circle</mat-icon></button>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a style="text-decoration: none;" class="navbar-brand" href="#"><img style="height: 60px; width: 90px;"
+            src="../../../assets/image/assets-high-resolution-logo-transparent.png">
+          App</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link  custom_nav" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link custom_nav" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link custom_nav" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <div  class="dropdown">
+              <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Our Products<mat-icon>arrow_drop_down</mat-icon>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <div style="display: flexbox; width: 40%;" >
+                  <li><a   class="dropdown-item custom_nav" href="#">Laptop</a></li>
+                  <li><a class="dropdown-item custom_nav" href="#">Mobile Phones</a></li>
+                  <li><a class="dropdown-item custom_nav" href="#">Freeze</a></li>
+                  <li><a   class="dropdown-item custom_nav" href="#">AC</a></li>
+               
+                </div>
+              </ul>
+            </div>
+          </li>
+          <li *ngIf="isLoggedIn" class="nav-item ">
+            <a class="nav-link custom_nav" href="#">Dashboard</a>
+          </li>
+        </ul>
+        <div>
+          <div class="dropdown">
+            <span>{{user_name}}</span>
+            <button style="z-index: 111;" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false" >
 
+              <mat-icon>account_circle</mat-icon><mat-icon>arrow_drop_down</mat-icon>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li *ngIf="!isLoggedIn"><a (click)="checkLogin()" class="dropdown-item" style="text-decoration: none;" href="#">Login</a></li>
+              <div *ngIf="isLoggedIn">
+                <li><a  class="dropdown-item" style="text-decoration: none;" href="#">Profile</a>
+                </li>
+                <li><a (click)="logout()"  class="dropdown-item" style="text-decoration: none;"
+                    href="#">Logout</a></li>
+              </div>
+
+            </ul>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav><br><br>
 
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/src/assets/image/firstHeader.jpeg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+  <div>
+    <div id="carouselExampleCaptions" class="carousel slide  " data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active ">
+          <img src="../../../assets/image/headway-5QgIuuBxKwM-unsplash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/image/headway-5QgIuuBxKwM-unsplash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/image/scott-graham-5fNmWej4tAA-unsplash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div><br><br><br><br>
+
+  <!-- some of our assets page -->
+
+  <div class="container" style="padding-left: 80px; padding-top: 15px; background-color: rgb(237, 237, 206);"
+    class="container bg_transparent_at_corner">
+    <div class="count-label" style="font-weight: bolder;">Recent Assets</div><br><br>
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-6 mb-4" *ngFor="let card of cards">
+        <mat-card style="border-radius: 10px;" class="example-card" (mouseenter)="onMouseEnter()"
+          (mouseleave)="onMouseLeave()">
+          <mat-card-header>
+            <mat-card-title>{{ card.assets_name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="card.asset_image" alt="Photo of a {{ card.assets_name }}" class="image">
+          <mat-card-content>
+            <p>
+              {{ card.asset_description }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions style="display: flex;justify-content: space-between;">
+            <button mat-icon-button><mat-icon>thumb_up</mat-icon></button>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>&nbsp;&nbsp;
+            <span class="price">{{ card.asset_price }}</span>
+            <span class="tenurity">/month</span>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="/src/assets/image/secondHead.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+  </div><br><br><br><br><br>
+  <!-- Review Page -->
+
+
+
+  <!-- about us page -->
+  <!-- faq page -->
+  <!-- contact us form -->
+
+
+  <div class="happy-customer-count">
+    <div class="count-label">Happy Customers</div><br><br>
+    <div class="count-value">{{ count }}<span>+</span></div>
+
+  </div><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="bg-dark text-center text-lg-start text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Footer Content</h5>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+            voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
+          <h5 class="text-uppercase text-white">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class=" text-white">Facebook</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Twitter</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Instagram</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Whatsup</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
       </div>
+      <!--Grid row-->
     </div>
-    <div class="carousel-item">
-      <img src="/src/assets/image/thirdHead.jpeg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:<a class="text-white" href="https://myassets.com/">MyAssets.com</a>
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <!-- Copyright -->
+  </footer>
+
 </div>

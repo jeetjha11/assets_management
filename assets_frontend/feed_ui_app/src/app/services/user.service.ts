@@ -9,6 +9,7 @@ import { API_ENDPOINTS } from '../utils/enviroment_config';
 export class UserService {
   isLoggedIn = new BehaviorSubject<boolean>((localStorage.getItem('isLoggedIn') == "true") ?? false);
   authToken = new BehaviorSubject<string>(localStorage.getItem("jwt") ?? '');
+  user_name=new BehaviorSubject<string>(localStorage.getItem("user_name")?? '')   
 
   constructor(private http: HttpClient) { }
 

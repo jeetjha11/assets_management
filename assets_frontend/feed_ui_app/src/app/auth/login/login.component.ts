@@ -33,6 +33,7 @@ export class LoginComponent {
         console.log(data);
         
         localStorage.setItem("uuid", data.uuid);
+        localStorage.setItem("user_name", data.user_name);
 
         localStorage.setItem("jwt", data.token);
         this.user_service.isLoggedIn.next(true);
