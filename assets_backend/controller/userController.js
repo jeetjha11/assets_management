@@ -29,7 +29,6 @@ module.exports = {
         const { email, password } = req.body
         try {
             const user = await UserModel.findOne({ email: email })
-            console.log(user);
             if (!user) {
                 res.status(404).json({
                     "message": "User Not Found"
@@ -42,6 +41,7 @@ module.exports = {
                     const token = create_jwt(user)
                     res.status(200).json({
                         "message": "User Logged In Successfully",
+                        "user_name":user.username,
                         "token": token
                     })
                 }

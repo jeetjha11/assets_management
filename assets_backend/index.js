@@ -6,7 +6,7 @@ require('./config/dbConnection')
 const userRoutes = require('./routes/userRoutes')
 const assetsRoutes = require('./routes/assetsRoutes')
 const cors = require('cors');
-
+const filesupload=require('express-fileupload')
 
 app.use(cors({
     origin: 'http://localhost:4200',
@@ -15,6 +15,10 @@ app.use(cors({
     credentials: true,
 }));
 app.use(express.json());
+
+app.use(filesupload({
+    useTempFiles:true
+}))
 
 app.use('/v1/user/auth/', userRoutes)
 app.use('/v1/assets/', assetsRoutes)
